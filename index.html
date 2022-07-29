@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="build/tailwind.css" />
+    <link rel="icon" href="Icons/mostly-cloudy.svg" />
+    <title>Weather App</title>
+  </head>
+  <body class="bg-gradient-to-r from-blue-100 via-blue-200 to-blue-300">
+    <div class="big-box flex sm:flex-row flex-col mx-auto mt-2 sm:border-4 rounded-3xl border-white sm:pt-3 sm:pb-0 sm:mx-4 my-auto">
+      <div class="sidebar sm:w-1/4 w-full  text-center sm:text-left sm:ml-7">
+        <div class="location-info"><h1 class="location text-3xl text-center sm:text-left">State, Country</h1></div>
+        <div class="curr-weather-card mb-3">
+            <div class="weather-icon flex justify-center sm:justify-start">
+                <img src="Icons/drizzle.svg" width="300" alt="" class="main-icon -ml-3">
+            </div> 
+            <div class="weather-info">
+                <h2 class="today-temp text-7xl sm:text-8xl font-semibold -mt-7 mb-3">12°</h2>
+                <h2 class="date-info text-xl">
+                    <span class="weekday">Monday,</span>
+                    <span class="time font-extralight">16:00</span>
+                </h2>
+            </div>
+        </div>
+        <div class="border-solid border-2 hidden sm:block"></div>
+        <div class="curr-mini-info my-6 sm:my-10 sm:text-lg">
+            <p class="mb-2">
+                ☁️ <span class="weather-description ">Mostly Cloudy</span>
+              </p>
+              <p class="">🌧 Rain - <span class="rain-chance">30</span>%</p>
+        </div>
+        <div class=" hidden mt-28 sm:block ">
+            <img src="Icons/city.jpeg"  width="85%" class=" rounded-xl" alt="">
+        </div>
+      </div>
+      <div class="mainbar sm:w-3/4 w-full">
+        <div class="navbar justify-between hidden sm:flex my-3 text-2xl px-5">
+            <div class="flex space-x-2">
+                <p class="font-thin">Today</p>
+                <p class="font-bold underline">Week</p>
+            </div>
+            <div class="flex space-x-2">
+                <button class=" border-2 rounded-full h-12 w-12 items-center text-center celsius active text-w">°C</button>
+                <button class="bg-white border-2 rounded-full h-12 w-12 items-center text-center farenheit">°F</button>
+            </div>
+          
+        </div>
+        <div class="border-solid border-2  sm:hidden"></div>
+        <div class="week-info flex flex-col sm:flex-row justify-evenly sm:px-7 bg-transparent">
+ 
+            <p class="text-center font-bold text-3xl sm:hidden mt-4">Weekly Forecast</p>
+            <div class="sun-info border-2 rounded-2xl text-center w-48 h-52 sm:w-max sm:h-min self-center my-3 bg-white bg-opacity-50">
+                <p class="text-xl sm:text-md">Sun</p>
+                <img src="Icons/drizzle.svg" width="135" alt="" class="m-auto sun">
+                <p> <span class="sun-max">15°</span><span class="low font-thin sun-min"> 3°</span></p>
+            </div>
+            <div class="sun-info border-2 rounded-2xl text-center w-48 h-52 sm:w-max sm:h-min self-center my-3  bg-white bg-opacity-50">
+                <p class="text-xl sm:text-md">Mon</p>
+                <img src="Icons/drizzle.svg" width="135" alt="" class="m-auto mon">
+                <p> <span class="mon-max">15°</span><span class="low font-thin mon-min"> 3°</span></p>
+            </div>
+            <div class="sun-info border-2 rounded-2xl text-center w-48 h-52 sm:w-max sm:h-min self-center my-3 bg-white bg-opacity-50">
+                <p class="text-xl sm:text-md">Tue</p>
+                <img src="Icons/drizzle.svg" width="135" alt="" class="m-auto tue">
+                <p> <span class="tue-max">15°</span><span class="low font-thin tue-min"> 3°</span></p>
+            </div>
+            <div class="sun-info border-2 rounded-2xl text-center w-48 h-52 sm:w-max sm:h-min self-center my-3 bg-white bg-opacity-50">
+                <p class="text-xl sm:text-md">Wed</p>
+                <img src="Icons/drizzle.svg" width="135" alt="" class="m-auto wed">
+                <p> <span class="wed-max">15°</span><span class="low font-thin wed-min"> 3°</span></p>
+            </div>
+            <div class="sun-info border-2 rounded-2xl text-center w-48 h-52 sm:w-max sm:h-min self-center my-3 bg-white bg-opacity-50">
+                <p class="text-xl sm:text-md">Thu</p>
+                <img src="Icons/drizzle.svg" width="135" alt="" class="m-auto thu">
+                <p> <span class="thu-max">15°</span><span class="low font-thin thu-min"> 3°</span></p>
+            </div>
+            <div class="sun-info border-2 rounded-2xl text-center w-48 h-52 sm:w-max sm:h-min self-center my-3 bg-white bg-opacity-50">
+                <p class="text-xl sm:text-md">Fri</p>
+                <img src="Icons/drizzle.svg" width="135" alt="" class="m-auto fri">
+                <p> <span class="fri-max">15°</span><span class="low font-thin fri-min"> 3°</span></p>
+            </div>
+            <div class="sun-info border-2 rounded-2xl text-center w-48 h-52 sm:w-max sm:h-min self-center my-3 bg-white bg-opacity-50">
+                <p class="text-xl sm:text-md">Sat</p>
+                <img src="Icons/drizzle.svg" width="135" alt="" class="m-auto sat">
+                <p> <span class="sat-max">15°</span><span class="low font-thin sat-min"> 3°</span></p>
+            </div>
+        </div>
+        <div class="border-solid border-2  sm:hidden"></div>
+        <div class="today-details sm:mx-5 my-5 ">
+            <h2 class="text-2xl text-center sm:text-left font-semibold mt-8 mb-10">Today's Highlights</h2>
+            <div class="extra-info flex flex-col sm:flex-row sm:flex-wrap justify-around">
+                <div
+              class="today-component sm:w-80 2xl:w-80 w-3/4 p-3 pb-5 sm:mb-8 overflow-hidden bg-white rounded-2xl bg-opacity-50 border-2 border-gray-200 my-3 m-auto sm:m-0"
+            >
+              <p class="text-gray-500 font-semibold text-center sm:text-left">UV Index</p>
+              <img src="Icons/uv-index.png" width="70" alt="" class="mx-auto">
+              <p class="uv-index text-4xl font-lightbold ml-32 sm:ml-36  uv-index">5</p>
+            </div>
+            <div
+              class="today-component text-center sm:text-left sm:mb-8 sm:w-80 2xl:w-80 w-3/4 p-3 overflow-hidden bg-white rounded-2xl bg-opacity-50 border-2 border-gray-200 my-3 m-auto sm:m-0"
+            >
+                <p class="text-gray-500 font-semibold p-2x mb-7">Wind Status</p>
+                <p class="text-5xl mb-8 "> <span class="windspeed"> 7.70 </span><span class="text-2xl">km/h</span></p>
+                <p>🧭 <span class="wind-direction">WSW</span></p>
+            </div>
+            <div
+              class="today-component text-center sm:text-left sm:mb-8 sm:w-80 2xl:w-80 w-3/4 p-3 overflow-hidden bg-white rounded-2xl bg-opacity-50 border-2 border-gray-200 my-3 m-auto sm:m-0"
+            >
+                <p class="text-gray-500 font-semibold p-2x mb-7">Pressure</p>
+                <p class="text-5xl mb-8 "><span class="pressure">5.2</span><span class="text-2xl">in</span></p>
+                <p><span class="pressure-description">Average</span></p>
+            </div>
+            <div
+                class="today-component text-center sm:text-left sm:mb-8 sm:w-80 2xl:w-80 w-3/4 p-3 overflow-hidden bg-white rounded-2xl bg-opacity-50 border-2 border-gray-200 my-3 m-auto sm:m-0"
+              >
+                  <p class="text-gray-500 font-semibold p-2x mb-7">Humidity</p>
+                  <p class="text-5xl mb-8 "> <span class="humidity">12</span><span class="">%</span></p>
+                  <p><span class="humidity-description">Normal ✅</span> </p>
+                </div>
+                <div
+                  class="today-component text-center sm:text-left sm:mb-8 sm:w-80 2xl:w-80 w-3/4 p-3 overflow-hidden bg-white rounded-2xl bg-opacity-50 border-2 border-gray-200 my-3 m-auto sm:m-0"
+                >
+                    <p class="text-gray-500 font-semibold p-2x mb-7">Visibility</p>
+                    <p class="text-5xl mb-8"> <span class="visibility">5.2</span><span class="text-2xl">km</span></p>
+                    <p><span class="">Average</span> 👀</p>
+                </div>
+                <div
+                    class="today-component text-center sm:text-left sm:mb-8 sm:w-80 2xl:w-80 w-3/4 p-3 overflow-hidden bg-white rounded-2xl bg-opacity-50 border-2 border-gray-200 my-3 m-auto sm:m-0"
+                  >
+                      <p class="text-gray-500 font-semibold p-2x mb-7">Air Quality</p>
+                      <p class="text-5xl mb-8 air-quality">105</p>
+                      <p><span class="">Unhealthy</span>😷</p>
+                </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>
